@@ -67,6 +67,7 @@ class Enemy : public GameObject
 public:
 	void move();
 	void loseHealth();
+	void defeated() { delete this; }
 
 private:
 	int health = 5;
@@ -90,6 +91,7 @@ private:
 class PickableItem : public GameObject
 {
 public:
+	void itemPicked() { delete this; }
 
 private:
 
@@ -103,6 +105,7 @@ int main()
 	while (gameLoop == true)
 	{
 		//joku viivytys
+		Sleep(125);
 		if (GetAsyncKeyState(VK_UP)) //1
 		{
 			std::cout << "Player Created" << std::endl;
