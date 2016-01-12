@@ -18,6 +18,7 @@ Lähtötaso tehtävä
 #include "Windows.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 class GameObject
 {
@@ -100,6 +101,8 @@ private:
 
 int main()
 {
+	std::vector<GameObject> gameObjects;
+
 	bool gameLoop = true;
 
 	while (gameLoop == true)
